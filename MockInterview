@@ -1,0 +1,72 @@
+let arr = [2,6,8,3,5,7,"a","b","e","u","y","z","i","o",8,8]
+
+
+function vowels(c){
+    if(c === 'a' || c === 'e' || c === 'i' || c === 'o' || 
+    c === 'u'){
+        console.log("vowels- "+c)
+    }else if(typeof c == "string"){
+        console.log("consonents- "+c)
+    }
+}
+
+function prime(n){
+    let isPrime = true;
+    
+    for(let i = 2; i<n; i++){
+        if(n % i == 0){
+            isPrime = false
+        }
+    }
+    if(isPrime && typeof n == "number"){
+        console.log("prime- "+n)
+    }
+}
+
+function even(n){
+    if(n % 2 == 0 && typeof n == "number"){
+        console.log("Even- "+n)
+    }
+}
+
+function mostFrequent(){
+  var arr1 = [2,6,8,3,5,7,"a","b","e","u","y","z","i","o",8,8]
+
+    var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m = 0
+}
+         console.log("Most frequent element is "+item)
+   
+    
+}
+
+
+for(let i = 0; i<arr.length; i++){
+    vowels(arr[i])
+}
+
+
+for(let i = 0; i<arr.length; i++){
+    prime(arr[i])
+}
+
+
+for(let i = 0; i<arr.length; i++){
+    even(arr[i])
+}
+
+mostFrequent();
